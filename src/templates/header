@@ -36,9 +36,9 @@
           <li class="home"><a href="index.html" class="off"><span>Home</span></a></li>
 [% END %]
           <li><a href="what-is-harmony.html" [% 'class="on"' IF pageid == 'whatis' %] >What is Harmony</a></li>
-          <li><a href="how-to-get-involved.html"[% 'class="on"' IF pageid == 'howto' %] >How to Get Involved</a></li>
-          <li><a href="draft-cas-for-review.html"[% 'class="on"' IF pageid == 'drafts' %] >Draft CAs for Review</a></li>
-          <li><a href="faqs.html"[% 'class="on"' IF pageid == 'faq' %] >FAQs</a></li>
+          <li><a href="how-to-get-involved.html" [% 'class="on"' IF pageid == 'howto' %] >How to Get Involved</a></li>
+          <li><a href="draft-cas-for-review.html" [% 'class="on"' IF pageid == 'drafts' %] >Draft CAs for Review</a></li>
+          <li><a href="faqs.html" [% 'class="on"' IF pageid == 'faq' %] >FAQs</a></li>
           <li><a href="wiki-links.html">Wiki Links</a></li>
           <li><a href="useful-info.html">Useful Info</a></li>
         </ul>
