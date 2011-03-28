@@ -1,3 +1,3 @@
 #!/bin/sh
 
-ttree -f etc/ttreerc
+ttree -a -f etc/ttreerc
