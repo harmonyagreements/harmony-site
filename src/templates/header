@@ -7,14 +7,6 @@
 <link href="styles.css" rel="stylesheet" type="text/css">
 <link href="reset.css" rel="stylesheet" type="text/css" media="screen">
 <link rel="shortcut icon" href="images/favicon.ico">
-		<!--[if IE 6]>
-		<script type='text/javascript' src='scripts/DD_belatedPNG.js'></script>
-[% IF pageid == 'home' %]
-		<script>DD_belatedPNG.fix('.involved, .review, .links, .faqs, .read-more, a.on, a.off');</script>
-[% ELSE %]
-		<script>DD_belatedPNG.fix('.involved, .review, .links, .faqs, .read-more, li.home a');</script>
-[% END %]
-		<![endif]-->
 </head>
 [% IF pageid == 'home' %]
 <body class="main">
@@ -36,11 +28,10 @@
           <li class="home"><a href="index.html" class="off"><span>Home</span></a></li>
 [% END %]
           <li><a href="what-is-harmony.html" [% 'class="on"' IF pageid == 'whatis' %] >What is Harmony</a></li>
-          <li><a href="how-to-get-involved.html" [% 'class="on"' IF pageid == 'howto' %] >How to Get Involved</a></li>
+          <li><a href="get-involved.html" [% 'class="on"' IF pageid == 'howto' %] >How to Get Involved</a></li>
           <li><a href="draft-cas-for-review.html" [% 'class="on"' IF pageid == 'drafts' %] >Draft CAs for Review</a></li>
+          <li><a href="guide.html" [% 'class="on"' IF pageid == 'guide' %] >Guide to CAs</a></li>
           <li><a href="faqs.html" [% 'class="on"' IF pageid == 'faq' %] >FAQs</a></li>
-          <li><a href="wiki-links.html">Wiki Links</a></li>
-          <li><a href="useful-info.html">Useful Info</a></li>
         </ul>
       </div>
       <div class="clear"></div>
