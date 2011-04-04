@@ -127,6 +127,9 @@ p a:hover, li a:hover {
 .sidebar2 .links a {
 	background-image:url(images/btn-links-off.gif);
 }
+.sidebar2 .guide a {
+	background-image:url(images/btn-guide-off.gif);
+}
 .sidebar2 a:hover, .sidebar2 a.on {
 	color: #df3884;
 	background-image:url(images/btn-involved-on.gif);
@@ -146,6 +149,10 @@ p a:hover, li a:hover {
 .sidebar2 .links a:hover, .sidebar2 .links a.on {
 	color: #df3884;
 	background-image:url(images/btn-links-on.gif);
+}
+.sidebar2 .guide a:hover, .sidebar2 .guide a.on {
+	color: #df3884;
+	background-image:url(images/btn-guide-on.gif);
 }
 .sidebar2 .top {
 	padding-top:30px;
@@ -241,6 +248,11 @@ p a:hover, li a:hover {
 	background-repeat: no-repeat;
 	background-position:left;
 }
+.main .content h2 a.guide {
+	background-image:url(images/icon-guide.png);
+	background-repeat: no-repeat;
+	background-position:left;
+}
 .main .content p {
 	padding:0px 30px 0px 30px;
 	display:block;
@@ -259,6 +271,8 @@ p a:hover, li a:hover {
 	background-position: bottom;
 	padding-bottom: 15px;
 }
+.main .content .section-height {
+	height:110px;}
 a.read-more {
 	color: #df3884;
 	background-image:url(images/read-more.png);
