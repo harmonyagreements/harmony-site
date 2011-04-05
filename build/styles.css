@@ -272,7 +272,8 @@ p a:hover, li a:hover {
 	padding-bottom: 15px;
 }
 .main .content .section-height {
-	height:110px;}
+	height:80px;
+}
 a.read-more {
 	color: #df3884;
 	background-image:url(images/read-more.png);
