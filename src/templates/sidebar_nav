@@ -2,7 +2,7 @@
       <div class="top"><div class="btm"> 
       <ul>
         <li class="involved"><a href="how-to-get-involved.html" [% 'class="on"' IF pageid == 'howto' %]>How to Get Involved</a></li>
-        <li class="review"><a href="draft-cas-for-review.html" [% 'class="on"' IF pageid == 'drafts' %]>Draft CAs for Review</a></li>
+        <li class="review"><a href="review.html" [% 'class="on"' IF pageid == 'review' %]>Draft CAs for Review</a></li>
         <li class="guide"><a href="guide.html" [% 'class="on"' IF pageid == 'guide' %]>Guide to the CAs</a></li>
         <li class="faqs"><a href="faqs.html" [% 'class="on"' IF pageid == 'faq' %]>FAQs</a></li>
       </ul></div>

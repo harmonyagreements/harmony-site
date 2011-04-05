@@ -445,11 +445,12 @@ h1 .back-to-faqs {
 	border:1px dotted #666666;
 	padding:5px;
 	vertical-align:top;
+	font-weight:bold;
 }
 .content td {
 font-size:12px; }
 .content th {
-	background-color:#df3884;
+	background-color:#999;
 	color:#FFF;
 	font-weight:bold;
 }
@@ -459,18 +460,27 @@ font-size:12px; }
 .content .table-right {
 	text-align:right;
 }
-.content td .pdf, .content td .odt, .content td .doc {
+.content td .pdf, .content td .odt, .content td .htm {
 	width:50px;
+	margin:2px;
 	color:#FFF;
 	text-transform:uppercase;
 	font-weight:bold;
-	background:url(images/bg-doc.gif) repeat-x top;
-	
 }
 .content td .odt {
-	background:url(images/bg-odt.gif) repeat-x top;
+        background-color:#43C330;
 }
 .content td .pdf {
-	background:url(images/bg-pdf.gif) repeat-x top;
+        background-color:#CC0000;
+}
+.content td .htm {
+        background-color:#0000CC;
+}
+.content td .pdf a, .content td .odt a, .content td .htm a {
+	color:#FFF;
+	text-decoration:none;
+}
+.content td .pdf a:hover, .content td .odt a:hover, .content td .htm a:hover {
+	color:#FFF;
 }
 
