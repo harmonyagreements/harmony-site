@@ -342,6 +342,13 @@ a.read-more:hover {
 }
 p.first {
 	border-top:1px dotted #505050;}
+p.faqs-list{
+	padding:13px 0 10px 35px;
+	text-align:left;
+	background:url(images/icon-faq-question.gif) no-repeat;
+	background-position:0 10px;
+	color:#505050;
+}
 p.faqs-question{
 	padding:13px 0 10px 35px;
 	text-align:left;
@@ -450,7 +457,7 @@ h1 .back-to-faqs {
 .content td {
 font-size:12px; }
 .content th {
-	background-color:#999;
+	background-color:#666666;
 	color:#FFF;
 	font-weight:bold;
 }
