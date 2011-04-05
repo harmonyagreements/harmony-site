@@ -289,15 +289,23 @@ a.read-more:hover {
 	padding: 0 15px 15px 20px;
 	color:#df3884;
 }
-.content ul li, .content ol li {
+.content ul li {
 	list-style:disc;
+	padding-bottom:10px;
+}
+.content ol li {
+	list-style-type:decimal;
+	padding-bottom:10px;
+}
+.content ol li.alpha {
+	list-style-type:lower-alpha;
 	padding-bottom:10px;
 }
 .content ul span, .content ol span {
 	color:#505050;
 }
 #nav ul {
-	list-style: none;
+/*	list-style: none; */
 	margin-top: 21px;
 	float:right;
 	margin-right:12px;
