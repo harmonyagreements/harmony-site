@@ -28,7 +28,7 @@
           <li class="home"><a href="index.html" class="off"><span>Home</span></a></li>
 [% END %]
           <li><a href="what-is-harmony.html" [% 'class="on"' IF pageid == 'whatis' %] >What is Harmony</a></li>
-          <li><a href="get-involved.html" [% 'class="on"' IF pageid == 'howto' %] >How to Get Involved</a></li>
+          <li><a href="get-involved.html" [% 'class="on"' IF pageid == 'involved' %] >How to Get Involved</a></li>
           <li><a href="review.html" [% 'class="on"' IF pageid == 'review' %] >Draft CAs for Review</a></li>
           <li><a href="guide.html" [% 'class="on"' IF pageid == 'guide' %] >Guide to CAs</a></li>
           <li><a href="faqs.html" [% 'class="on"' IF pageid == 'faq' %] >FAQs</a></li>
