@@ -76,13 +76,13 @@ def table_header():
     return html
     
 def table_comments(comments):
-    html = ''
+    html = "\n"
     for comment in comments:
         html += '<div class="bubble"><strong>'
         html += comment['tag']
         html += ': </strong>'
         html += comment['text']
-        html += '</div>'
+        html += '</div>' + "\n"
     return html
     
     
@@ -92,7 +92,7 @@ def table_row(index, line, comments):
     html += '<td>'
     if index in comments:
         html += table_comments(comments[index])
-    html += '</td></tr>'
+    html += '</td></tr>' + "\n"
     return html
 
 def table_footer():
