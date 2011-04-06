@@ -500,3 +500,20 @@ font-size:12px; }
 	color:#FFF;
 }
 
+.comments .lineno {
+	color:#df3884;
+	vertical-align:top;
+	text-align:right;
+	font-size:smaller;
+	padding-right: 5px;
+        padding-top: 2px;
+}
+.comments .line {
+	vertical-align:top;
+	white-space:nowrap;
+}
+.comments .bubble {
+	background-color:#CCC;
+        margin-bottom: 5px;
+        padding: 5px;
+}
