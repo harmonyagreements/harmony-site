@@ -1,4 +1,4 @@
-#i!/usr/bin/python
+#!/usr/bin/python
 
 import os, re, argparse
 
@@ -55,20 +55,77 @@ def extract_comments(path):
 
     return storage
 
+def extract_text(filename):
+    handle = open(filename, 'r')
+    lines = handle.readlines()
+    return lines
 
-def process_comments(text, comment_dir):
-    comments = extract_comments(comment_dir)
-    print comments
-    #print comments[20]
+def table_header():
+    html = """<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Harmony Agreements</title>
+<link href="styles.css?m=1302048985" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="images/favicon.ico">
+</head>
+<body>
+<div class="comments">
+<table>
+"""
+    return html
+    
+def table_comments(comments):
+    html = ''
+    for comment in comments:
+        html += '<div class="bubble"><strong>'
+        html += comment['tag']
+        html += ': </strong>'
+        html += comment['text']
+        html += '</div>'
+    return html
+    
+    
+def table_row(index, line, comments):
+    html = '<tr><td class="lineno">'+str(index)+'</td>'
+    html += '<td class="line">'+line+'</td>'
+    html += '<td>'
+    if index in comments:
+        html += table_comments(comments[index])
+    html += '</td></tr>'
+    return html
+
+def table_footer():
+    html = "</table>\n</div>\n</body>\n</html>\n"
+    return html
+
+def write_html(filename, text, comments):
+    index = 0
+    html = table_header()
+    for line in text:
+        index += 1
+        html += table_row(index, line, comments)
+
+    if -1 in comments:
+        html += table_row(-1, '', comments)
+
+    html += table_footer()
+    output = open(filename, 'w')
+    output.write(html)
+    output.close()
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
             description='Process comments on a text file.')
-    parser.add_argument('--text', metavar='TEXT',
+    parser.add_argument('text', metavar='TEXT',
             help='A plain text file to be marked up with comments.')
-    parser.add_argument('--comments', metavar='COMMENTS',
+    parser.add_argument('--comments', metavar='COMMENTS', default='./',
             help='A path to the directory containing comment files.')
+    parser.add_argument('--out', metavar='OUTFILE', default='comments.html',
+            help='Where to write the output.')
     args = parser.parse_args()
-    print args
-    process_comments(args.text, args.comments)
+
+    comments = extract_comments(args.comments)
+    text = extract_text(args.text)
+    write_html(args.out, text, comments)
