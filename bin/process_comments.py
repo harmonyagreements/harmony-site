@@ -99,7 +99,6 @@ def table_footer():
     html = """</table>
 </div>
 </body>
-</html>
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
