@@ -2,4 +2,4 @@
 
 cd ~/harmony-site
 git pull
-cp -r build/* ~/www.harmonyagreements.org/htdocs/.
+cp -r ~/harmony-site/build/* ~/www.harmonyagreements.org/htdocs/.
