@@ -87,18 +87,18 @@ which the Contribution is included (and portions of such combination) as it exis
 Submission Date of that Contribution; provided that this license is conditioned upon
 compliance with Section 2.1(d). 
 
-(d)(Option One) As a condition on the [license/grant of] rights in Sections 2.1(b) and
+(d)(Option One) As a condition on the license rights in Sections 2.1(b) and
 2.1(c), We agree to license the Contribution only under the terms of the license or
 licenses which We are using on the Submission Date for the Work in which the Contribution
 is included (including any rights to adopt any future version of a license if permitted). 
 
-(d)(Option Two) As a condition on the [license/grant of] rights in Sections 2.1(b) and
+(d)(Option Two) As a condition on the license rights in Sections 2.1(b) and
 2.1(c), We agree to license the Contribution only under the terms of the license or
 licenses which We are using on the Submission Date for the Work in which the Contribution
 is included or the following additional licenses__________ (including any right to adopt
 any future version of a license if permitted). 
 
-(d)(Option Three) As a condition on the [license/grant of] rights in Sections 2.1(b) and
+(d)(Option Three) As a condition on the license rights in Sections 2.1(b) and
 2.1(c), We agree to license the Contribution only under the terms of the license or
 licenses which We are using on the Submission Date for the Work in which the Contribution
 is included or any licenses which are approved by the Open Source Initiative on or after
@@ -106,7 +106,7 @@ the Effective Date, including both permissive and copyleft licenses, whether or 
 licenses are subsequently disapproved (including any right to adopt any future version of
 a license if permitted).
 
-(d)(Option Four) As a condition on the [license/grant of] rights in Sections 2.1(b) and
+(d)(Option Four) As a condition on the license rights in Sections 2.1(b) and
 2.1(c), We agree to license the Contribution only under the terms of the license or
 licenses which We are using on the Submission Date for the Work in which the Contribution
 is included or any licenses which are recommended by the Free Software Foundation for use
@@ -114,7 +114,7 @@ in GNU projects on or after the Effective Date, whether or not such licenses are
 subsequently disapproved (including any right to adopt any future version of a license if
 permitted).
 
-(d)(Option Five) Based on the [license/grant of] rights granted in Section 2.1(b) and
+(d)(Option Five) Based on the license rights granted in Section 2.1(b) and
 2.1(c), if We include Your Contribution in a Work, We may license such Contribution under
 any license, including copyleft, permissive, commercial, or proprietary licenses, but  as
 a condition of the exercise of this right in Section 2.1(d),  We agree to license the
