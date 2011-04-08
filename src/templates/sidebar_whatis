@@ -1,6 +1,6 @@
     <div class="sidebar1">
       <h1>What is HARMONY?</h1>
       <div class="section">
-        <p>Project Harmony is a community-centered group focused on contributor agreements for free and open source software (FOSS), launched in May 2010 by Amanda Brock, General Counsel for Canonical. As a group, we represent a diverse collection of perspectives, experiences, communities, projects, non-profit and for-profit entities. In that diversity, we share a common belief in the future of FOSS, and a common interest in using our skills (whether they're legal, organizational, editorial, technical, or otherwise) to the benefit of collaborative FOSS communities.</p>
+        <p>Project Harmony is a community-centered group focused on contributor agreements for free and open source software (FOSS). As a group, we represent a diverse collection of perspectives, experiences, communities, projects, non-profit and for-profit entities. In that diversity, we share a common belief in the future of FOSS, and a common interest in using our skills (whether they're legal, organizational, editorial, technical, or otherwise) to the benefit of collaborative FOSS communities.</p>
         <a href="about.html" class="read-more">Read more</a> </div>
       <!-- end .sidebar1 --></div>
