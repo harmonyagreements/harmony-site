@@ -29,7 +29,7 @@
 [% END %]
           <li><a href="about.html" [% 'class="on"' IF pageid == 'about' %] >What is Harmony</a></li>
           <li><a href="get-involved.html" [% 'class="on"' IF pageid == 'involved' %] >How to Get Involved</a></li>
-          <li><a href="review.html" [% 'class="on"' IF pageid == 'review' %] >Draft CAs for Review</a></li>
+          <li><a href="http://selector.harmonyagreements.org" [% 'class="on"' IF pageid == 'selector' %] >Agreement Selector</a></li>
           <li><a href="guide.html" [% 'class="on"' IF pageid == 'guide' %] >Guide to the CAs</a></li>
           <li><a href="faqs.html" [% 'class="on"' IF pageid == 'faq' %] >FAQs</a></li>
         </ul>
