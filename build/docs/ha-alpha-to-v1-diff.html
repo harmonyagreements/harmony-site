@@ -1,0 +1,2989 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+ "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+    <title>Harmony Agreements - Differences between Alpha and 1.0</title>
+    <style>
+TABLE { border-collapse: collapse; border-spacing: 0px; }
+TD.linenum { color: #909090; 
+             text-align: right;
+             vertical-align: top;
+             font-weight: bold;
+             border-right: 1px solid black;
+             border-left: 1px solid black; }
+TD.added { background-color: #DDDDFF; }
+TD.modified { background-color: #BBFFBB; }
+TD.removed { background-color: #FFCCCC; }
+TD.normal { background-color: #FFFFE1; }
+</style>
+
+</head>
+<body>
+<table>
+<tr><td width="100%">
+<table>
+    <tr>
+        <td class="modified">Modified lines:&nbsp;</td>
+        <td class="modified"><a href="#F1_1">1</a>, <a href="#F1_3">3</a>, <a href="#F1_6">6</a>, <a href="#F1_7">7</a>, <a href="#F1_8">8</a>, <a href="#F1_9">9</a>, <a href="#F1_10">10</a>, <a href="#F1_11">11</a>, <a href="#F1_12">12</a>, <a href="#F1_13">13</a>, <a href="#F1_14">14</a>, <a href="#F1_15">15</a>, <a href="#F1_16">16</a>, <a href="#F1_17">17</a>, <a href="#F1_18">18</a>, <a href="#F1_19">19</a>, <a href="#F1_20">20</a>, <a href="#F1_21">21</a>, <a href="#F1_22">22</a>, <a href="#F1_23">23</a>, <a href="#F1_24">24</a>, <a href="#F1_25">25</a>, <a href="#F1_26">26</a>, <a href="#F1_27">27</a>, <a href="#F1_28">28</a>, <a href="#F1_29">29</a>, <a href="#F1_30">30</a>, <a href="#F1_31">31</a>, <a href="#F1_32">32</a>, <a href="#F1_33">33</a>, <a href="#F1_34">34</a>, <a href="#F1_35">35</a>, <a href="#F1_36">36</a>, <a href="#F1_37">37</a>, <a href="#F1_38">38</a>, <a href="#F1_39">39</a>, <a href="#F1_40">40</a>, <a href="#F1_41">41</a>, <a href="#F1_42">42</a>, <a href="#F1_43">43</a>, <a href="#F1_44">44</a>, <a href="#F1_45">45</a>, <a href="#F1_46">46</a>, <a href="#F1_47">47</a>, <a href="#F1_48">48</a>, <a href="#F1_49">49</a>, <a href="#F1_50">50</a>, <a href="#F1_51">51</a>, <a href="#F1_52">52</a>, <a href="#F1_53">53</a>, <a href="#F1_54">54</a>, <a href="#F1_55">55</a>, <a href="#F1_56">56</a>, <a href="#F1_57">57</a>, <a href="#F1_77">77</a>, <a href="#F1_78">78</a>, <a href="#F1_79">79</a>, <a href="#F1_80">80</a>, <a href="#F1_81">81</a>, <a href="#F1_82">82</a>, <a href="#F1_83">83</a>, <a href="#F1_84">84</a>, <a href="#F1_85">85</a>, <a href="#F1_86">86</a>, <a href="#F1_87">87</a>, <a href="#F1_88">88</a>, <a href="#F1_89">89</a>, <a href="#F1_90">90</a>, <a href="#F1_91">91</a>, <a href="#F1_92">92</a>, <a href="#F1_93">93</a>, <a href="#F1_94">94</a>, <a href="#F1_95">95</a>, <a href="#F1_96">96</a>, <a href="#F1_97">97</a>, <a href="#F1_98">98</a>, <a href="#F1_99">99</a>, <a href="#F1_100">100</a>, <a href="#F1_101">101</a>, <a href="#F1_102">102</a>, <a href="#F1_103">103</a>, <a href="#F1_104">104</a>, <a href="#F1_105">105</a>, <a href="#F1_106">106</a>, <a href="#F1_107">107</a>, <a href="#F1_108">108</a>, <a href="#F1_109">109</a>, <a href="#F1_110">110</a>, <a href="#F1_111">111</a>, <a href="#F1_112">112</a>, <a href="#F1_113">113</a>, <a href="#F1_114">114</a>, <a href="#F1_115">115</a>, <a href="#F1_116">116</a>, <a href="#F1_117">117</a>, <a href="#F1_118">118</a>, <a href="#F1_119">119</a>, <a href="#F1_120">120</a>, <a href="#F1_121">121</a>, <a href="#F1_122">122</a>, <a href="#F1_123">123</a>, <a href="#F1_124">124</a>, <a href="#F1_125">125</a>, <a href="#F1_126">126</a>, <a href="#F1_127">127</a>, <a href="#F1_128">128</a>, <a href="#F1_129">129</a>, <a href="#F1_130">130</a>, <a href="#F1_131">131</a>, <a href="#F1_132">132</a>, <a href="#F1_133">133</a>, <a href="#F1_134">134</a>, <a href="#F1_135">135</a>, <a href="#F1_136">136</a>, <a href="#F1_137">137</a>, <a href="#F1_138">138</a>, <a href="#F1_139">139</a>, <a href="#F1_140">140</a>, <a href="#F1_141">141</a>, <a href="#F1_142">142</a>, <a href="#F1_143">143</a>, <a href="#F1_144">144</a>, <a href="#F1_145">145</a>, <a href="#F1_146">146</a>, <a href="#F1_176">176</a>, <a href="#F1_177">177</a>, <a href="#F1_178">178</a>, <a href="#F1_179">179</a>, <a href="#F1_180">180</a>, <a href="#F1_192">192</a>, <a href="#F1_193">193</a>, <a href="#F1_194">194</a>, <a href="#F1_203">203</a>, <a href="#F1_207">207</a>, <a href="#F1_208">208</a>, <a href="#F1_211">211</a>, <a href="#F1_214">214</a>, <a href="#F1_220">220</a>, <a href="#F1_221">221</a>, <a href="#F1_225">225</a>, <a href="#F1_226">226</a>, <a href="#F1_227">227</a>, <a href="#F1_228">228</a>, <a href="#F1_234">234</a>, <a href="#F1_235">235</a>, <a href="#F1_237">237</a>, <a href="#F1_239">239</a>, <a href="#F1_245">245</a>, <a href="#F1_247">247</a>, <a href="#F1_253">253</a>, <a href="#F1_254">254</a>, <a href="#F1_258">258</a>, <a href="#F1_280">280</a>, <a href="#F1_281">281</a></td>
+    </tr>
+    <tr>
+        <td class="added">Added line:&nbsp;</td>
+        <td class="added"><a href="#F2_196">196</a>, <a href="#F2_197">197</a>, <a href="#F2_198">198</a>, <a href="#F2_199">199</a>, <a href="#F2_200">200</a>, <a href="#F2_201">201</a>, <a href="#F2_202">202</a>, <a href="#F2_203">203</a>, <a href="#F2_204">204</a>, <a href="#F2_205">205</a>, <a href="#F2_206">206</a>, <a href="#F2_207">207</a>, <a href="#F2_208">208</a>, <a href="#F2_209">209</a>, <a href="#F2_210">210</a>, <a href="#F2_211">211</a>, <a href="#F2_212">212</a>, <a href="#F2_213">213</a>, <a href="#F2_214">214</a>, <a href="#F2_215">215</a>, <a href="#F2_216">216</a>, <a href="#F2_217">217</a>, <a href="#F2_218">218</a></td>
+    </tr>
+    <tr>
+        <td class="removed">Removed line:&nbsp;</td>
+        <td class="removed"><a href="#F1_4">4</a>, <a href="#F1_58">58</a>, <a href="#F1_59">59</a>, <a href="#F1_60">60</a>, <a href="#F1_61">61</a>, <a href="#F1_62">62</a>, <a href="#F1_63">63</a>, <a href="#F1_64">64</a>, <a href="#F1_65">65</a>, <a href="#F1_66">66</a>, <a href="#F1_67">67</a>, <a href="#F1_68">68</a>, <a href="#F1_69">69</a>, <a href="#F1_70">70</a>, <a href="#F1_71">71</a>, <a href="#F1_72">72</a>, <a href="#F1_73">73</a>, <a href="#F1_147">147</a>, <a href="#F1_148">148</a>, <a href="#F1_149">149</a>, <a href="#F1_150">150</a>, <a href="#F1_151">151</a>, <a href="#F1_152">152</a>, <a href="#F1_153">153</a>, <a href="#F1_154">154</a>, <a href="#F1_155">155</a>, <a href="#F1_156">156</a>, <a href="#F1_157">157</a>, <a href="#F1_158">158</a>, <a href="#F1_159">159</a>, <a href="#F1_160">160</a>, <a href="#F1_161">161</a>, <a href="#F1_162">162</a>, <a href="#F1_163">163</a>, <a href="#F1_164">164</a>, <a href="#F1_165">165</a>, <a href="#F1_166">166</a>, <a href="#F1_167">167</a>, <a href="#F1_168">168</a>, <a href="#F1_169">169</a>, <a href="#F1_170">170</a>, <a href="#F1_171">171</a>, <a href="#F1_172">172</a>, <a href="#F1_173">173</a>, <a href="#F1_181">181</a>, <a href="#F1_182">182</a>, <a href="#F1_183">183</a>, <a href="#F1_184">184</a>, <a href="#F1_185">185</a>, <a href="#F1_186">186</a>, <a href="#F1_187">187</a>, <a href="#F1_188">188</a>, <a href="#F1_189">189</a>, <a href="#F1_190">190</a>, <a href="#F1_195">195</a>, <a href="#F1_196">196</a>, <a href="#F1_197">197</a>, <a href="#F1_198">198</a>, <a href="#F1_199">199</a>, <a href="#F1_200">200</a>, <a href="#F1_201">201</a>, <a href="#F1_209">209</a>, <a href="#F1_222">222</a>, <a href="#F1_229">229</a>, <a href="#F1_255">255</a>, <a href="#F1_256">256</a>, <a href="#F1_259">259</a>, <a href="#F1_260">260</a>, <a href="#F1_261">261</a>, <a href="#F1_262">262</a>, <a href="#F1_263">263</a>, <a href="#F1_264">264</a>, <a href="#F1_265">265</a>, <a href="#F1_266">266</a>, <a href="#F1_267">267</a>, <a href="#F1_268">268</a>, <a href="#F1_269">269</a>, <a href="#F1_270">270</a>, <a href="#F1_271">271</a>, <a href="#F1_272">272</a>, <a href="#F1_273">273</a>, <a href="#F1_274">274</a>, <a href="#F1_275">275</a>, <a href="#F1_276">276</a>, <a href="#F1_277">277</a>, <a href="#F1_278">278</a></td>
+    </tr>
+</table>
+</td>
+</tr>
+</table>
+<hr/>
+<table>
+    <tr>
+        <th>&nbsp;</th>
+        <th width="45%"><strong><big>combined-alpha.txt</big></strong></th>
+        <th>&nbsp;</th>
+        <th>&nbsp;</th>
+        <th width="45%"><strong><big>combined-v1.txt</big></strong></th>
+    </tr>
+    <tr>
+        <td width="16">&nbsp;</td>
+        <td>
+        301 lines<br/>
+        17573 bytes<br/>
+        Last modified : Fri Apr 29 16:22:48 2011<br/>
+        <hr/>
+        </td>
+        <td width="16">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td>
+        238 lines<br/>
+        12912 bytes<br/>
+        Last modified : Thu Jul  7 16:09:17 2011<br/>
+        <hr/>
+        </td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_1">1</a></td>
+        <td class="modified">CONTRIBUTOR AGREEMENT (combined template)</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">1</td>
+        <td class="modified">Harmony [Individual|Entity] Contributor [License|Assignment] Agreement</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">2</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">2</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_3">3</a></td>
+        <td class="modified">Thank you for your interest in providing one or more contributions to ___________ ("We" or</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">3</td>
+        <td class="modified">Thank you for your interest in contributing to [PROJECT_NAME] ("We" or "Us").</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_4">4</a></td>
+        <td class="removed">"Us").  We refer to the contributor as "You".</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">5</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">4</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_6">6</a></td>
+        <td class="modified">In order to document the copyright and other rights granted with Contributions (as defined</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">5</td>
+        <td class="modified">This contributor agreement ("Agreement") documents the rights granted by contributors to</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_7">7</a></td>
+        <td class="modified">below), We collect a Contributor Agreement ("Agreement") from You which confirms your</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">6</td>
+        <td class="modified">Us. To make this document effective, please sign it and send it to Us by mail, email, fax,</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_8">8</a></td>
+        <td class="modified">agreement to the terms below. Please follow the instructions at the end of the document to</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">7</td>
+        <td class="modified">or electronic submission, following the instructions at [SUBMISSION_INSTRUCTIONS]. This is</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_9">9</a></td>
+        <td class="modified">make it effective. This is a legally binding document, so please read it carefully before</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">8</td>
+        <td class="modified">a legally binding document, so please read it carefully before agreeing to it. The</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_10">10</a></td>
+        <td class="modified">agreeing to it. The Agreement provides for submission of Contributions to more than one</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">9</td>
+        <td class="modified">Agreement may cover more than one software project managed by Us.</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_11">11</a></td>
+        <td class="modified">software project managed by Us.</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">10</td>
+        <td class="modified"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_12">12</a></td>
+        <td class="modified"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">11</td>
+        <td class="modified">1. Definitions</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_13">13</a></td>
+        <td class="modified">1. DEFINITIONS</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">12</td>
+        <td class="modified"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_14">14</a></td>
+        <td class="modified"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">13</td>
+        <td class="modified">"You" (Individual) means the individual who Submits a Contribution to Us.</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_15">15</a></td>
+        <td class="modified">1.1 "Contribution" shall mean any work of authorship that is Submitted to Us in which You</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">14</td>
+        <td class="modified"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_16">16</a></td>
+        <td class="modified">own the Copyright. If You do not own the Copyright in the entire work of authorship</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">15</td>
+        <td class="modified">"You" (Entity) means any Legal Entity on behalf of whom a Contribution has been received</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_17">17</a></td>
+        <td class="modified">Submitted, You should follow the procedure in Section 3(d).</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">16</td>
+        <td class="modified">by Us. "Legal Entity" means an entity which is not a natural person. "Affiliates" means</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_18">18</a></td>
+        <td class="modified"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">17</td>
+        <td class="modified">other Legal Entities that control, are controlled by, or under common control with that</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_19">19</a></td>
+        <td class="modified">1.2 "Copyright" shall mean all rights protecting works of authorship, including copyright,</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">18</td>
+        <td class="modified">Legal Entity. For the purposes of this definition, "control" means (i) the power, direct</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_20">20</a></td>
+        <td class="modified">moral and neighboring rights, as appropriate, for the full term of their existence</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">19</td>
+        <td class="modified">or indirect, to cause the direction or management of such Legal Entity, whether by</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_21">21</a></td>
+        <td class="modified">including any extensions owned or controlled by You [or Your Affiliates].</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">20</td>
+        <td class="modified">contract or otherwise, (ii) ownership of fifty percent (50%) or more of the outstanding</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_22">22</a></td>
+        <td class="modified"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">21</td>
+        <td class="modified">shares or securities which vote to elect the management or other persons who direct such</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_23">23</a></td>
+        <td class="modified">1.3 "Effective Date" shall mean the earlier of your execution of this Agreement or your</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">22</td>
+        <td class="modified">Legal Entity or (iii) beneficial ownership of such entity.</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_24">24</a></td>
+        <td class="modified">first submission of a Contribution to Us.</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">23</td>
+        <td class="modified"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_25">25</a></td>
+        <td class="modified"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">24</td>
+        <td class="modified">"Contribution" means any work of authorship that is Submitted by You to Us in which You</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_26">26</a></td>
+        <td class="modified">[1.4 "Legal Entity" shall mean a corporation, limited liability company or other entity.]</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">25</td>
+        <td class="modified">own or assert ownership of the Copyright. If You do not own the Copyright in the entire</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_27">27</a></td>
+        <td class="modified"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">26</td>
+        <td class="modified">work of authorship, please follow the instructions in [NONOWNER_INSTRUCTIONS].</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_28">28</a></td>
+        <td class="modified">1.5 "Media" shall mean any Contribution which is not software. Media may include video,</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">27</td>
+        <td class="modified"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_29">29</a></td>
+        <td class="modified">text or images.</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">28</td>
+        <td class="modified">"Copyright" means all rights protecting works of authorship owned or controlled by You [or</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_30">30</a></td>
+        <td class="modified"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">29</td>
+        <td class="modified">Your Affiliates], including copyright, moral and neighboring rights, as appropriate, for</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_31">31</a></td>
+        <td class="modified">1.6 "Patent Claims" shall mean any patent claim(s), now owned or acquired in the future,</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">30</td>
+        <td class="modified">the full term of their existence including any extensions by You.</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_32">32</a></td>
+        <td class="modified">including without limitation, method, process, and apparatus claims which You [or Your</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">31</td>
+        <td class="modified"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_33">33</a></td>
+        <td class="modified">Affiliates] (a) owned or controlled by You [or Your Affiliates] or (b) which You [or Your</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">32</td>
+        <td class="modified">"Material" means the work of authorship which is made available by Us to third parties.</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_34">34</a></td>
+        <td class="modified">Affiliates] or have the right to grant, to the maximum extent possible, whether on the</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">33</td>
+        <td class="modified">When this Agreement covers more than one software project, the Material means the work of</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_35">35</a></td>
+        <td class="modified">Submission Date of the relevant Contribution or subsequently acquired, under the terms of</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">34</td>
+        <td class="modified">authorship to which the Contribution was Submitted. After You Submit the Contribution, it</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_36">36</a></td>
+        <td class="modified">Section 2.1(b), but only to the extent to which the making, using, having made, selling,</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">35</td>
+        <td class="modified">may be included in the Material.</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_37">37</a></td>
+        <td class="modified">offering for sale, importing or otherwise transferring of the Contribution or the</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">36</td>
+        <td class="modified"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_38">38</a></td>
+        <td class="modified">Contribution with a Work infringes such Patent Claims.</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">37</td>
+        <td class="modified">"Submit"  means any form of electronic, verbal, or written communication sent to Us or our</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_39">39</a></td>
+        <td class="modified"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">38</td>
+        <td class="modified">representatives, including but not limited to electronic mailing lists, source code</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_40">40</a></td>
+        <td class="modified">1.7 "Submission" shall mean the work of authorship which You have Submitted.  A Submission</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">39</td>
+        <td class="modified">control systems, and issue tracking systems that are managed by, or on behalf of, Us for</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_41">41</a></td>
+        <td class="modified">may consist of only a Contribution or may include third party works of authorship in</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">40</td>
+        <td class="modified">the purpose of discussing and improving the Material, but excluding communication that is</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_42">42</a></td>
+        <td class="modified">addition to the Contribution.  "Submitted" shall mean any form of electronic, verbal, or</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">41</td>
+        <td class="modified">conspicuously marked or otherwise designated in writing by You as "Not a Contribution."</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_43">43</a></td>
+        <td class="modified">written communication sent to Us or our representatives, including but not limited to</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">42</td>
+        <td class="modified"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_44">44</a></td>
+        <td class="modified">communication of electronic mailing lists, source code control systems, and issue tracking</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">43</td>
+        <td class="modified">"Submission Date" means the date on which You Submit a Contribution to Us.</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_45">45</a></td>
+        <td class="modified">systems that are managed by, or on behalf of, Us for the purpose of discussing and</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">44</td>
+        <td class="modified"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_46">46</a></td>
+        <td class="modified">improving the Work, but excluding communication that is conspicuously marked or otherwise</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">45</td>
+        <td class="modified">"Effective Date" means the date You execute this Agreement or the date You first Submit a</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_47">47</a></td>
+        <td class="modified">designated in writing by You as "Not a Contribution."</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">46</td>
+        <td class="modified">Contribution to Us, whichever is earlier.</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_48">48</a></td>
+        <td class="modified"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">47</td>
+        <td class="modified"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_49">49</a></td>
+        <td class="modified">1.8 "Submission Date" shall mean the date on which a Contribution is Submitted to Us.</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">48</td>
+        <td class="modified">"Media" means any portion of a Contribution which is not software.</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_50">50</a></td>
+        <td class="modified"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">49</td>
+        <td class="modified"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_51">51</a></td>
+        <td class="modified">1.9 "Work" shall mean the work or works of authorship which are software made available by</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">50</td>
+        <td class="modified">2. Grant of Rights</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_52">52</a></td>
+        <td class="modified">Us to third parties but not including the Contribution.  This Agreement may cover</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">51</td>
+        <td class="modified"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_53">53</a></td>
+        <td class="modified">Submissions to one or more Works.</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">52</td>
+        <td class="modified">2.1 Copyright License</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_54">54</a></td>
+        <td class="modified"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">53</td>
+        <td class="modified"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_55">55</a></td>
+        <td class="modified">1.10(Individual) "You" shall mean any individual on behalf of whom a Contribution has been</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">54</td>
+        <td class="modified">(a) You retain ownership of the Copyright in Your Contribution and have the same rights to</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_56">56</a></td>
+        <td class="modified">received by Us.</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">55</td>
+        <td class="modified">use or license the Contribution which You would have had without entering into the</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_57">57</a></td>
+        <td class="modified"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">56</td>
+        <td class="modified">Agreement.</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_58">58</a></td>
+        <td class="removed">1.10(Entity) "You" shall mean any Legal Entity on behalf of whom a Contribution has been</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_59">59</a></td>
+        <td class="removed">received by Us. "Affiliates" shall mean other Legal Entities that are controlled by,</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_60">60</a></td>
+        <td class="removed">controlling or under common control by a Legal Entity. For the purposes of this</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_61">61</a></td>
+        <td class="removed">definition, "control" means (i) the power, direct or indirect, to cause the direction or</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_62">62</a></td>
+        <td class="removed">management of such Legal Entity, whether by contract or otherwise, (ii) ownership of fifty</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_63">63</a></td>
+        <td class="removed">percent (50%) or more of the outstanding shares or securities which vote to elect the</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_64">64</a></td>
+        <td class="removed">management or other persons who direct such Legal Entity or (iii) beneficial ownership of</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_65">65</a></td>
+        <td class="removed">such entity.</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_66">66</a></td>
+        <td class="removed"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_67">67</a></td>
+        <td class="removed">2. TRANSFER OPTIONS</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_68">68</a></td>
+        <td class="removed"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_69">69</a></td>
+        <td class="removed">2.1 Copyright License/Patent License</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_70">70</a></td>
+        <td class="removed"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_71">71</a></td>
+        <td class="removed">(a) You retain ownership of the Copyright and Patent Claims in your Contributions and have</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_72">72</a></td>
+        <td class="removed">the same rights to use or license the Contributions which You would have had without</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_73">73</a></td>
+        <td class="removed">entering into the Agreement.</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">74</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">57</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">75</td>
+        <td class="normal">(b) To the maximum extent permitted by the relevant law, You grant to Us a perpetual,</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">58</td>
+        <td class="normal">(b) To the maximum extent permitted by the relevant law, You grant to Us a perpetual,</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">76</td>
+        <td class="normal">worldwide, non-exclusive, transferable, royalty-free, irrevocable license under the</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">59</td>
+        <td class="normal">worldwide, non-exclusive, transferable, royalty-free, irrevocable license under the</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_77">77</a></td>
+        <td class="modified">Copyrights covering the Contribution, with the right to sublicense such rights through</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">60</td>
+        <td class="modified">Copyright covering the Contribution, with the right to sublicense such rights through</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_78">78</a></td>
+        <td class="modified">multiple tiers of sublicensees, to reproduce, modify, display,  perform and distribute the</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">61</td>
+        <td class="modified">multiple tiers of sublicensees, to reproduce, modify, display, perform and distribute the</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_79">79</a></td>
+        <td class="modified">Contribution as part of the Work; provided that this license is conditioned upon</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">62</td>
+        <td class="modified">Contribution as part of the Material; provided that this license is conditioned upon</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_80">80</a></td>
+        <td class="modified">compliance with Section 2.1(d).</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">63</td>
+        <td class="modified">compliance with Section 2.3.</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_81">81</a></td>
+        <td class="modified"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">64</td>
+        <td class="modified"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_82">82</a></td>
+        <td class="modified">(c) You grant to Us a perpetual, worldwide, non-exclusive, transferable, royalty-free,</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">65</td>
+        <td class="modified">2.1 Copyright Assignment</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_83">83</a></td>
+        <td class="modified">irrevocable license under the Patent Claims, with the right to sublicense these rights to</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">66</td>
+        <td class="modified"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_84">84</a></td>
+        <td class="modified">multiple tiers of sublicensees, to make, have made, use, offer for sale, sell, import and</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">67</td>
+        <td class="modified">(a) At the time the Contribution is Submitted, You assign to Us all right, title, and</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_85">85</a></td>
+        <td class="modified">otherwise transfer the Contribution and the Contribution in combination with the Work in</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">68</td>
+        <td class="modified">interest worldwide in all Copyright covering the Contribution; provided that this transfer</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_86">86</a></td>
+        <td class="modified">which the Contribution is included (and portions of such combination) as it exists on the</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">69</td>
+        <td class="modified">is conditioned upon compliance with Section 2.3.</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_87">87</a></td>
+        <td class="modified">Submission Date of that Contribution; provided that this license is conditioned upon</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">70</td>
+        <td class="modified"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_88">88</a></td>
+        <td class="modified">compliance with Section 2.1(d).</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">71</td>
+        <td class="modified">(b) To the extent that any of the rights in Section 2.1(a) cannot be assigned by You to</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_89">89</a></td>
+        <td class="modified"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">72</td>
+        <td class="modified">Us, You grant to Us a perpetual, worldwide, exclusive, royalty-free, transferable,</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_90">90</a></td>
+        <td class="modified">(d)(Option One) As a condition on the license rights in Sections 2.1(b) and 2.1(c),</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">73</td>
+        <td class="modified">irrevocable license under such non-assigned rights, with rights to sublicense through</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_91">91</a></td>
+        <td class="modified">We agree to license the Contribution only under the terms of the license or licenses</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">74</td>
+        <td class="modified">multiple tiers of sublicensees, to practice such non-assigned rights, including, but not</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_92">92</a></td>
+        <td class="modified">which We are using on the Submission Date for the Work in which the Contribution is</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">75</td>
+        <td class="modified">limited to, the right to reproduce, modify, display, perform and distribute the</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_93">93</a></td>
+        <td class="modified">included (including any rights to adopt any future version of a license if permitted).</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">76</td>
+        <td class="modified">Contribution; provided that this license is conditioned upon compliance with Section 2.3.</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_94">94</a></td>
+        <td class="modified"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">77</td>
+        <td class="modified"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_95">95</a></td>
+        <td class="modified">(d)(Option Two) As a condition on the license rights in Sections 2.1(b) and 2.1(c),</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">78</td>
+        <td class="modified">(c) To the extent that any of the rights in Section 2.1(a) can neither be assigned nor</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_96">96</a></td>
+        <td class="modified">We agree to license the Contribution only under the terms of the license or licenses</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">79</td>
+        <td class="modified">licensed by You to Us, You irrevocably waive and agree never to assert such rights against</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_97">97</a></td>
+        <td class="modified">which We are using on the Submission Date for the Work in which the Contribution is</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">80</td>
+        <td class="modified">Us, any of our successors in interest, or any of our licensees, either direct or indirect;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_98">98</a></td>
+        <td class="modified">included or the following additional licenses__________ (including any right to adopt</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">81</td>
+        <td class="modified">provided that this agreement not to assert is conditioned upon compliance with Section</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_99">99</a></td>
+        <td class="modified">any future version of a license if permitted).</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">82</td>
+        <td class="modified">2.3.</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_100">100</a></td>
+        <td class="modified"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">83</td>
+        <td class="modified"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_101">101</a></td>
+        <td class="modified">(d)(Option Three) As a condition on the license rights in Sections 2.1(b) and 2.1(c),</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">84</td>
+        <td class="modified">(d) Upon such transfer of rights to Us, to the maximum extent possible, We immediately</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_102">102</a></td>
+        <td class="modified">We agree to license the Contribution only under the terms of the license or licenses</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">85</td>
+        <td class="modified">grant to You a perpetual, worldwide, non-exclusive, royalty-free, transferable,</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_103">103</a></td>
+        <td class="modified">which We are using on the Submission Date for the Work in which the Contribution is</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">86</td>
+        <td class="modified">irrevocable license under such rights covering the Contribution, with rights to sublicense</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_104">104</a></td>
+        <td class="modified">included or any licenses which are approved by the Open Source Initiative on or after</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">87</td>
+        <td class="modified">through multiple tiers of sublicensees, to reproduce, modify, display, perform, and</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_105">105</a></td>
+        <td class="modified">the Effective Date, including both permissive and copyleft licenses, whether or not such</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">88</td>
+        <td class="modified">distribute the Contribution. The intention of the parties is that this license will be as</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_106">106</a></td>
+        <td class="modified">licenses are subsequently disapproved (including any right to adopt any future version</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">89</td>
+        <td class="modified">broad as possible and to provide You with rights as similar as possible to the owner of</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_107">107</a></td>
+        <td class="modified">of a license if permitted).</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">90</td>
+        <td class="modified">the rights that You transferred. This license back is limited to the Contribution and does</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_108">108</a></td>
+        <td class="modified"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">91</td>
+        <td class="modified">not provide any rights to the Material.</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_109">109</a></td>
+        <td class="modified">(d)(Option Four) As a condition on the license rights in Sections 2.1(b) and 2.1(c),</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">92</td>
+        <td class="modified"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_110">110</a></td>
+        <td class="modified">We agree to license the Contribution only under the terms of the license or licenses</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">93</td>
+        <td class="modified">2.2 Patent License</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_111">111</a></td>
+        <td class="modified">which We are using on the Submission Date for the Work in which the Contribution is</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">94</td>
+        <td class="modified"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_112">112</a></td>
+        <td class="modified">included or any licenses which are recommended by the Free Software Foundation for</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">95</td>
+        <td class="modified">For patent claims including, without limitation, method, process, and apparatus claims</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_113">113</a></td>
+        <td class="modified">use in GNU projects on or after the Effective Date, whether or not such licenses are</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">96</td>
+        <td class="modified">which You [or Your Affiliates] own, control or have the right to grant, now or in the</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_114">114</a></td>
+        <td class="modified">subsequently disapproved (including any right to adopt any future version of a license</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">97</td>
+        <td class="modified">future, You grant to Us a perpetual, worldwide, non-exclusive, transferable, royalty-free,</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_115">115</a></td>
+        <td class="modified">if permitted).</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">98</td>
+        <td class="modified">irrevocable patent license, with the right to sublicense these rights to multiple tiers of</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_116">116</a></td>
+        <td class="modified"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">99</td>
+        <td class="modified">sublicensees, to make, have made, use, sell, offer for sale, import and otherwise transfer</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_117">117</a></td>
+        <td class="modified">(d)(Option Five) Based on the license rights granted in Section 2.1(b) and 2.1(c), if</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">100</td>
+        <td class="modified">the Contribution and the Contribution in combination with the Material (and portions of</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_118">118</a></td>
+        <td class="modified">We include Your Contribution in a Work, We may license such Contribution under any</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">101</td>
+        <td class="modified">such combination). This license is granted only to the extent that the exercise of the</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_119">119</a></td>
+        <td class="modified">license, including copyleft, permissive, commercial, or proprietary licenses, but as</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">102</td>
+        <td class="modified">licensed rights infringes such patent claims; and provided that this license is</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_120">120</a></td>
+        <td class="modified">a condition of the exercise of this right in Section 2.1(d), We agree to license the</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">103</td>
+        <td class="modified">conditioned upon compliance with Section 2.3.</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_121">121</a></td>
+        <td class="modified">Contribution under the terms of the license or licenses which We are using on the</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">104</td>
+        <td class="modified"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_122">122</a></td>
+        <td class="modified">Submission Date for the Work in which the Contribution is included.</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">105</td>
+        <td class="modified">2.3 Outbound License</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_123">123</a></td>
+        <td class="modified"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">106</td>
+        <td class="modified"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_124">124</a></td>
+        <td class="modified">(e) In addition to the license selected above in Section 2.1(d), We may use the following</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">107</td>
+        <td class="modified">(Option One) As a condition on the grant of rights in Sections 2.1 and 2.2, We agree to</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_125">125</a></td>
+        <td class="modified">additional licenses for the Media portion of the Contribution: __________ (including any</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">108</td>
+        <td class="modified">license the Contribution only under the terms of the license or licenses which We are</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_126">126</a></td>
+        <td class="modified">right to adopt any future version of a license if permitted).</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">109</td>
+        <td class="modified">using on the Submission Date for the Material (including any rights to adopt any future</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_127">127</a></td>
+        <td class="modified"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">110</td>
+        <td class="modified">version of a license if permitted).</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_128">128</a></td>
+        <td class="modified">2.1 Copyright Assignment/Patent License</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">111</td>
+        <td class="modified"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_129">129</a></td>
+        <td class="modified"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">112</td>
+        <td class="modified">(Option Two) As a condition on the grant of rights in Sections 2.1 and 2.2, We agree to</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_130">130</a></td>
+        <td class="modified">(a) At the time the Contribution is Submitted, You assign all right, title, and interest</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">113</td>
+        <td class="modified">license the Contribution only under the terms of the license or licenses which We are</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_131">131</a></td>
+        <td class="modified">worldwide in all Copyrights covering the Contribution to Us; provided that this transfer</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">114</td>
+        <td class="modified">using on the Submission Date for the Material or the following additional licenses:</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_132">132</a></td>
+        <td class="modified">is conditioned upon compliance with Section 2.1(f).</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">115</td>
+        <td class="modified">[LIST_OF_LICENSES] (including any right to adopt any future version of a license if</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_133">133</a></td>
+        <td class="modified"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">116</td>
+        <td class="modified">permitted).</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_134">134</a></td>
+        <td class="modified">(b) To the extent any of the rights, title and interest in the Copyrights in Section</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">117</td>
+        <td class="modified"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_135">135</a></td>
+        <td class="modified">2.1(a) are not assigned by You to Us, You grant to Us a perpetual, worldwide, exclusive,</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">118</td>
+        <td class="modified">(Option Three) As a condition on the grant of rights in Sections 2.1 and 2.2, We agree to</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_136">136</a></td>
+        <td class="modified">royalty-free, transferable, irrevocable license under such non assigned Copyrights, with</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">119</td>
+        <td class="modified">license the Contribution only under the terms of the license or licenses which We are</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_137">137</a></td>
+        <td class="modified">rights to sublicense through multiple tiers of sublicensees, to practice such non-assigned</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">120</td>
+        <td class="modified">using on the Submission Date for the Material or any licenses which are approved by the</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_138">138</a></td>
+        <td class="modified">rights, including, but not limited to, the right to reproduce, modify, display, perform</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">121</td>
+        <td class="modified">Open Source Initiative on or after the Effective Date, including both permissive and</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_139">139</a></td>
+        <td class="modified">and distribute the Contribution provided that this transfer is conditioned upon compliance</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">122</td>
+        <td class="modified">copyleft licenses, whether or not such licenses are subsequently disapproved (including</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_140">140</a></td>
+        <td class="modified">with Section 2.1(f).</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">123</td>
+        <td class="modified">any right to adopt any future version of a license if permitted).</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_141">141</a></td>
+        <td class="modified"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">124</td>
+        <td class="modified"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_142">142</a></td>
+        <td class="modified">(c) To the extent any of the rights in and to the Copyrights covering the Contribution can</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">125</td>
+        <td class="modified">(Option Four) As a condition on the grant of rights in Sections 2.1 and 2.2, We agree to</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_143">143</a></td>
+        <td class="modified">neither be assigned nor licensed by You to Us, You irrevocably waive and agree never to</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">126</td>
+        <td class="modified">license the Contribution only under the terms of the license or licenses which We are</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_144">144</a></td>
+        <td class="modified">assert such rights against Us, any of our successors in interest, or any of our licensees,</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">127</td>
+        <td class="modified">using on the Submission Date for the Material or any licenses on the Free Software</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_145">145</a></td>
+        <td class="modified">either direct or indirect; provided that this transfer is conditioned upon compliance with</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">128</td>
+        <td class="modified">Foundation's list of "Recommended copyleft licenses" on or after the Effective Date,</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_146">146</a></td>
+        <td class="modified">Section 2.1(f).</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">129</td>
+        <td class="modified">whether or not such licenses are subsequently disapproved (including any right to adopt</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_147">147</a></td>
+        <td class="removed"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_148">148</a></td>
+        <td class="removed">(d) Upon such transfer of rights to Us, to the maximum extent permitted by law for the</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_149">149</a></td>
+        <td class="removed">Copyrights to the extent transferred by You under Sections 2.1(a), 2.1(b) and 2.1(c), We</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_150">150</a></td>
+        <td class="removed">immediately grant to You a perpetual, worldwide, non-exclusive, royalty-free,</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_151">151</a></td>
+        <td class="removed">transferable, irrevocable license under such rights covering the Contribution, with rights</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_152">152</a></td>
+        <td class="removed">to sublicense through multiple tiers of sublicensees, to reproduce, modify, display,</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_153">153</a></td>
+        <td class="removed">perform, and distribute the Contribution. The intention of the parties is that this</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_154">154</a></td>
+        <td class="removed">license will be as broad as possible and to provide You with rights as similar as possible</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_155">155</a></td>
+        <td class="removed">to the owner of the rights that You transferred. This license back is limited to the</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_156">156</a></td>
+        <td class="removed">Contribution and does not provide any rights to the Work.</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_157">157</a></td>
+        <td class="removed"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_158">158</a></td>
+        <td class="removed">(e) You grant to Us a perpetual, worldwide, non-exclusive, transferable, royalty-free,</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_159">159</a></td>
+        <td class="removed">irrevocable license under the Patent Claims, with the right to sublicense these rights to</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_160">160</a></td>
+        <td class="removed">multiple tiers of sublicensees, to make, have made, use, offer for sale, sell, import and</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_161">161</a></td>
+        <td class="removed">otherwise transfer the Contribution and the Contribution in combination with the Work in</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_162">162</a></td>
+        <td class="removed">which the Contribution is included (and portions of such combination) as it exists on the</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_163">163</a></td>
+        <td class="removed">Submission Date of that Contribution.</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_164">164</a></td>
+        <td class="removed"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_165">165</a></td>
+        <td class="removed">(f)(Option One) As a condition on the grant of rights in Sections 2.1(a), 2.1(b) and</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_166">166</a></td>
+        <td class="removed">2.1(c), We agree to license the Contribution only under the terms of the license or</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_167">167</a></td>
+        <td class="removed">licenses which We are using on the Submission Date for the Work in which the Contribution</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_168">168</a></td>
+        <td class="removed">is included (including any rights to adopt any future version of a license if permitted).</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_169">169</a></td>
+        <td class="removed"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_170">170</a></td>
+        <td class="removed">(f)(Option Two) As a condition on the grant of rights in Sections 2.1(a), 2.1(b) and</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_171">171</a></td>
+        <td class="removed">2.1(c), We agree to license the Contribution only under the terms of the license or</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_172">172</a></td>
+        <td class="removed">licenses which We are using on the Submission Date for the Work in which the Contribution</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_173">173</a></td>
+        <td class="removed">is included or the following additional licenses__________ (including any right to adopt</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">174</td>
+        <td class="normal">any future version of a license if permitted).</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">130</td>
+        <td class="normal">any future version of a license if permitted).</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">175</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">131</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_176">176</a></td>
+        <td class="modified">(f)(Option Three) As a condition on the grant of rights in Sections 2.1(a), 2.1(b) and</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">132</td>
+        <td class="modified">(Option Five) Based on the grant of rights in Sections 2.1 and 2.2, if We include Your</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_177">177</a></td>
+        <td class="modified">2.1(c), We agree to license the Contribution only under the terms of the license or</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">133</td>
+        <td class="modified">Contribution in a Material, We may license the Contribution under any license, including</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_178">178</a></td>
+        <td class="modified">licenses which We are using on the Submission Date for the Work in which the Contribution</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">134</td>
+        <td class="modified">copyleft, permissive, commercial, or proprietary licenses. As a condition on the exercise</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_179">179</a></td>
+        <td class="modified">is included or any licenses which are approved by the Open Source Initiative on or after</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">135</td>
+        <td class="modified">of this right, We agree to also license the Contribution under the terms of the license or</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_180">180</a></td>
+        <td class="modified">the Effective Date, including both permissive and copyleft licenses, whether or not such</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">136</td>
+        <td class="modified">licenses which We are using for the Material on the Submission Date.</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_181">181</a></td>
+        <td class="removed">licenses are subsequently disapproved (including any right to adopt any future version of</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_182">182</a></td>
+        <td class="removed">a license if permitted).</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_183">183</a></td>
+        <td class="removed"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_184">184</a></td>
+        <td class="removed">(f)(Option Four) As a condition on the grant of rights in Sections 2.1(a), 2.1(b) and</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_185">185</a></td>
+        <td class="removed">2.1(c), We agree to license the Contribution only under the terms of the license or</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_186">186</a></td>
+        <td class="removed">licenses which We are using on the Submission Date for the Work in which the Contribution</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_187">187</a></td>
+        <td class="removed">is included or any licenses which are recommended by the Free Software Foundation for use</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_188">188</a></td>
+        <td class="removed">in GNU projects on or after the Effective Date, whether or not such licenses are</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_189">189</a></td>
+        <td class="removed">subsequently disapproved (including any right to adopt any future version of a license if</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_190">190</a></td>
+        <td class="removed">permitted).</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">191</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">137</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_192">192</a></td>
+        <td class="modified">(f)(Option Five) Based on the grant of rights granted in Sections 2.1(a), 2.1(b) and</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">138</td>
+        <td class="modified">In addition, We may use the following licenses for Media in the Contribution:</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_193">193</a></td>
+        <td class="modified">2.1(c), if We include Your Contribution in a Work, We may license such Contribution under</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">139</td>
+        <td class="modified">[LIST_OF_MEDIA_LICENSES] (including any right to adopt any future version of a license if</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_194">194</a></td>
+        <td class="modified">any license, including copyleft, permissive, commercial, or proprietary licenses, but as a</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">140</td>
+        <td class="modified">permitted).</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_195">195</a></td>
+        <td class="removed">condition of the exercise of this right in Section 2.1(f), We agree to license the</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_196">196</a></td>
+        <td class="removed">Contribution under the terms of the license or licenses which We are using for the Work in</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_197">197</a></td>
+        <td class="removed">which the Contribution is included on the Submission Date.</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_198">198</a></td>
+        <td class="removed"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_199">199</a></td>
+        <td class="removed">(g) In addition to the license selected above in Section 2.1(f), We may use the following</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_200">200</a></td>
+        <td class="removed">additional licenses for the Media portion of the Contribution: __________ (including any</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_201">201</a></td>
+        <td class="removed">right to adopt any future version of a license if permitted).</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">202</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">141</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_203">203</a></td>
+        <td class="modified">2.2 Moral Rights. If moral rights apply to the Contribution, to the maximum extent</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">142</td>
+        <td class="modified">2.4 Moral Rights. If moral rights apply to the Contribution, to the maximum extent</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">204</td>
+        <td class="normal">permitted by law, You waive and agree not to assert such moral rights against Us or our</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">143</td>
+        <td class="normal">permitted by law, You waive and agree not to assert such moral rights against Us or our</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">205</td>
+        <td class="normal">successors in interest, or any of our licensees, either direct or indirect.</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">144</td>
+        <td class="normal">successors in interest, or any of our licensees, either direct or indirect.</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">206</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">145</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_207">207</a></td>
+        <td class="modified">2.3 Our Rights. You acknowledge that We are not obligated to use your Contribution as part</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">146</td>
+        <td class="modified">2.5 Our Rights. You acknowledge that We are not obligated to use Your Contribution as part</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_208">208</a></td>
+        <td class="modified">of the Work distributed by Us and may make the decision to include any Contribution as it</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">147</td>
+        <td class="modified">of the Material and may decide to include any Contribution We consider appropriate.</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_209">209</a></td>
+        <td class="removed">believes is appropriate.</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">210</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">148</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_211">211</a></td>
+        <td class="modified">2.4 Reservation of Rights. Any rights not expressly [assigned or] licensed under this</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">149</td>
+        <td class="modified">2.6 Reservation of Rights. Any rights not expressly [assigned or] licensed under this</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">212</td>
+        <td class="normal">section are expressly reserved by You.</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">150</td>
+        <td class="normal">section are expressly reserved by You.</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">213</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">151</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_214">214</a></td>
+        <td class="modified">3. AGREEMENT</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">152</td>
+        <td class="modified">3. Agreement</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">215</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">153</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">216</td>
+        <td class="normal">You confirm that:</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">154</td>
+        <td class="normal">You confirm that:</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">217</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">155</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">218</td>
+        <td class="normal">(a) You have the legal authority to enter into this Agreement.</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">156</td>
+        <td class="normal">(a) You have the legal authority to enter into this Agreement.</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">219</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">157</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_220">220</a></td>
+        <td class="modified">(b) as provided in the definitions, You reaffirm that You [or Your Affiliates] own the</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">158</td>
+        <td class="modified">(b) You [or Your Affiliates] own the Copyright and patent claims covering the Contribution</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_221">221</a></td>
+        <td class="modified">Copyrights and the Patent Claims covering the Contribution which are required to grant the</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">159</td>
+        <td class="modified">which are required to grant the rights under Section 2.</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_222">222</a></td>
+        <td class="removed">rights under Section 2.</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">223</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">160</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">224</td>
+        <td class="normal">(c)(Individual) The grant of rights under Section 2 does not violate any grant of rights</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">161</td>
+        <td class="normal">(c)(Individual) The grant of rights under Section 2 does not violate any grant of rights</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_225">225</a></td>
+        <td class="modified">which You have made to third parties, including your employer.  If You are an employee,</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">162</td>
+        <td class="modified">which You have made to third parties, including Your employer.  If You are an employee,</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_226">226</a></td>
+        <td class="modified">You have had your employer approve this Agreement and sign this document if required by Us</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">163</td>
+        <td class="modified">You have had Your employer approve this Agreement or sign the Entity version of this</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_227">227</a></td>
+        <td class="modified">as described in Section 3.4(d).  If You are less than eighteen years old, please have your</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">164</td>
+        <td class="modified">document.  If You are less than eighteen years old, please have Your parents or guardian</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_228">228</a></td>
+        <td class="modified">parents or guardian sign the Agreement, if such approval is required by Us as described in</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">165</td>
+        <td class="modified">sign the Agreement.</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_229">229</a></td>
+        <td class="removed">Section 3.4(d).</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">230</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">166</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">231</td>
+        <td class="normal">(c)(Entity) The grant of rights under Section 2 does not violate any grant of rights which</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">167</td>
+        <td class="normal">(c)(Entity) The grant of rights under Section 2 does not violate any grant of rights which</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">232</td>
+        <td class="normal">You or Your Affiliates have made to third parties.</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">168</td>
+        <td class="normal">You or Your Affiliates have made to third parties.</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">233</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">169</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_234">234</a></td>
+        <td class="modified">(d) If You do not own the copyright in part or all of the Submission, You will follow the</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">170</td>
+        <td class="modified">(d) You have followed the instructions in [NONOWNER_INSTRUCTIONS], if You do not own the</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_235">235</a></td>
+        <td class="modified">procedure set forth by Us in _________.</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">171</td>
+        <td class="modified">Copyright in the entire work of authorship Submitted.</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">236</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">172</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_237">237</a></td>
+        <td class="modified">4. DISCLAIMER</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">173</td>
+        <td class="modified">4. Disclaimer</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">238</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">174</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_239">239</a></td>
+        <td class="modified">EXCEPT FOR THE EXPRESS WARRANTIES IN ARTICLE 3, THE CONTRIBUTION IS</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">175</td>
+        <td class="modified">EXCEPT FOR THE EXPRESS WARRANTIES IN SECTION 3, THE CONTRIBUTION IS</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">240</td>
+        <td class="normal">PROVIDED "AS IS". MORE PARTICULARLY, ALL EXPRESS OR IMPLIED WARRANTIES</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">176</td>
+        <td class="normal">PROVIDED "AS IS". MORE PARTICULARLY, ALL EXPRESS OR IMPLIED WARRANTIES</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">241</td>
+        <td class="normal">INCLUDING, WITHOUT LIMITATION, ANY IMPLIED WARRANTY OF MERCHANTABILITY,</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">177</td>
+        <td class="normal">INCLUDING, WITHOUT LIMITATION, ANY IMPLIED WARRANTY OF MERCHANTABILITY,</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">242</td>
+        <td class="normal">FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE EXPRESSLY</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">178</td>
+        <td class="normal">FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE EXPRESSLY</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">243</td>
+        <td class="normal">DISCLAIMED BY YOU TO US [AND BY US TO YOU]. TO THE EXTENT THAT ANY SUCH</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">179</td>
+        <td class="normal">DISCLAIMED BY YOU TO US [AND BY US TO YOU]. TO THE EXTENT THAT ANY SUCH</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">244</td>
+        <td class="normal">WARRANTIES CANNOT BE DISCLAIMED, SUCH WARRANTY IS LIMITED IN DURATION TO</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">180</td>
+        <td class="normal">WARRANTIES CANNOT BE DISCLAIMED, SUCH WARRANTY IS LIMITED IN DURATION TO</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_245">245</a></td>
+        <td class="modified">THE MINIMUM PERIOD PERMITTED BY LAW.</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">181</td>
+        <td class="modified">THE MINIMUM PERIOD PERMITTED BY LAW.</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">246</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">182</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_247">247</a></td>
+        <td class="modified">5. CONSEQUENTIAL DAMAGE WAIVER</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">183</td>
+        <td class="modified">5. Consequential Damage Waiver</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">248</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">184</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">249</td>
+        <td class="normal">TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT WILL</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">185</td>
+        <td class="normal">TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT WILL</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">250</td>
+        <td class="normal">YOU [OR US] BE LIABLE FOR ANY LOSS OF PROFITS, LOSS OF ANTICIPATED</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">186</td>
+        <td class="normal">YOU [OR US] BE LIABLE FOR ANY LOSS OF PROFITS, LOSS OF ANTICIPATED</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">251</td>
+        <td class="normal">SAVINGS, LOSS OF DATA, INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">187</td>
+        <td class="normal">SAVINGS, LOSS OF DATA, INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">252</td>
+        <td class="normal">AND EXEMPLARY DAMAGES ARISING OUT OF THIS AGREEMENT REGARDLESS OF THE</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">188</td>
+        <td class="normal">AND EXEMPLARY DAMAGES ARISING OUT OF THIS AGREEMENT REGARDLESS OF THE</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_253">253</a></td>
+        <td class="modified">LEGAL OR EQUITABLE THEORY (CONTRACT, TORT (INCLUDING NEGLIGENCE) OR</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">189</td>
+        <td class="modified">LEGAL OR EQUITABLE THEORY (CONTRACT, TORT OR OTHERWISE) UPON WHICH THE</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_254">254</a></td>
+        <td class="modified">OTHERWISE) UPON WHICH THE CLAIM IS BASED.</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">190</td>
+        <td class="modified">CLAIM IS BASED.</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_255">255</a></td>
+        <td class="removed"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_256">256</a></td>
+        <td class="removed">6. MISCELLANEOUS</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">257</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">191</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_258">258</a></td>
+        <td class="modified">6.1 Governing Law. This Agreement will be governed by and construed in accordance with the</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">192</td>
+        <td class="modified">6. Miscellaneous</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_259">259</a></td>
+        <td class="removed">laws of the _________ excluding its conflicts of law provisions. Under certain</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_260">260</a></td>
+        <td class="removed">circumstances, the governing law in this section might be superseded by the United Nations</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_261">261</a></td>
+        <td class="removed">Convention on Contracts for the International Sale of Goods ("UN Convention") and the</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_262">262</a></td>
+        <td class="removed">parties intend to avoid the application of the UN Convention to this Agreement and, thus,</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_263">263</a></td>
+        <td class="removed">exclude the application of the UN Convention in its entirety to this Agreement.</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_264">264</a></td>
+        <td class="removed"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_265">265</a></td>
+        <td class="removed">6.2 Miscellaneous Provisions. This Agreement sets out the entire agreement between You and</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_266">266</a></td>
+        <td class="removed">Us for your Contributions to Us and overrides all other agreements or understandings.</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_267">267</a></td>
+        <td class="removed">Either party may assign the rights and obligations under the Agreement to any third party</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_268">268</a></td>
+        <td class="removed">if the third party agrees, as a condition of the assignment,  in writing to abide by the</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_269">269</a></td>
+        <td class="removed">rights and obligations in the Agreement. The failure of either party to require</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_270">270</a></td>
+        <td class="removed">performance by the other party of any provision of this Agreement in one situation shall</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_271">271</a></td>
+        <td class="removed">not affect the right of a party to require such performance at any time in the future and</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_272">272</a></td>
+        <td class="removed">a waiver of performance under a provision in one situation shall not be considered a</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_273">273</a></td>
+        <td class="removed">waiver of the performance of the provision in the future or a waiver of the provision in</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_274">274</a></td>
+        <td class="removed">its entirety. If any provision of this Agreement is found void and unenforceable, such</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_275">275</a></td>
+        <td class="removed">provision will be replaced to the extent possible with a provision that comes closest to</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_276">276</a></td>
+        <td class="removed">the meaning of the original provision and which is enforceable.  The terms and conditions</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_277">277</a></td>
+        <td class="removed">set forth in this Agreement shall apply notwithstanding any failure of essential purpose</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_278">278</a></td>
+        <td class="removed">of this Agreement or any limited remedy to the maximum extent possible under law.</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">&nbsp;</td>
+        <td class="removed">&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">279</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">193</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_280">280</a></td>
+        <td class="modified">The parties agree to the terms of the Agreement and indicate such agreement as described</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">194</td>
+        <td class="modified">6.1 This Agreement will be governed by and construed in accordance with the laws of</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum"><a name="F1_281">281</a></td>
+        <td class="modified">in _________.</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">195</td>
+        <td class="modified">[JURISDICTION] excluding its conflicts of law provisions. Under certain circumstances, the</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_196">196</a></td>
+        <td class="added">governing law in this section might be superseded by the United Nations Convention on</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_197">197</a></td>
+        <td class="added">Contracts for the International Sale of Goods ("UN Convention") and the parties intend to</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_198">198</a></td>
+        <td class="added">avoid the application of the UN Convention to this Agreement and, thus, exclude the</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_199">199</a></td>
+        <td class="added">application of the UN Convention in its entirety to this Agreement.</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_200">200</a></td>
+        <td class="added"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_201">201</a></td>
+        <td class="added">6.2 This Agreement sets out the entire agreement between You and Us for Your Contributions</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_202">202</a></td>
+        <td class="added">to Us and overrides all other agreements or understandings.</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_203">203</a></td>
+        <td class="added"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_204">204</a></td>
+        <td class="added">6.3  If You or We assign the rights or obligations received through this Agreement to a</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_205">205</a></td>
+        <td class="added">third party, as a condition of the assignment, that third party must agree in writing to</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_206">206</a></td>
+        <td class="added">abide by all the rights and obligations in the Agreement.</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_207">207</a></td>
+        <td class="added"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_208">208</a></td>
+        <td class="added">6.4 The failure of either party to require performance by the other party of any provision</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_209">209</a></td>
+        <td class="added">of this Agreement in one situation shall not affect the right of a party to require such</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_210">210</a></td>
+        <td class="added">performance at any time in the future. A waiver of performance under a provision in one</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_211">211</a></td>
+        <td class="added">situation shall not be considered a waiver of the performance of the provision in the</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_212">212</a></td>
+        <td class="added">future or a waiver of the provision in its entirety.</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_213">213</a></td>
+        <td class="added"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_214">214</a></td>
+        <td class="added">6.5 If any provision of this Agreement is found void and unenforceable, such provision</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_215">215</a></td>
+        <td class="added">will be replaced to the extent possible with a provision that comes closest to the meaning</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_216">216</a></td>
+        <td class="added">of the original provision and which is enforceable.  The terms and conditions set forth in</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_217">217</a></td>
+        <td class="added">this Agreement shall apply notwithstanding any failure of essential purpose of this</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_218">218</a></td>
+        <td class="added">Agreement or any limited remedy to the maximum extent possible under law.</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">282</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">219</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">283</td>
+        <td class="normal">You (Individual)</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">220</td>
+        <td class="normal">You (Individual)</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">284</td>
+        <td class="normal">________________________</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">221</td>
+        <td class="normal">________________________</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">285</td>
+        <td class="normal">Name:    ______________________</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">222</td>
+        <td class="normal">Name:    ______________________</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">286</td>
+        <td class="normal">Address: ______________________</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">223</td>
+        <td class="normal">Address: ______________________</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">287</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;______________________</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">224</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;______________________</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">288</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">225</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">289</td>
+        <td class="normal">You (Legal Entity)</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">226</td>
+        <td class="normal">You (Legal Entity)</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">290</td>
+        <td class="normal">________________________</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">227</td>
+        <td class="normal">________________________</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">291</td>
+        <td class="normal">Name:    ______________________</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">228</td>
+        <td class="normal">Name:    ______________________</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">292</td>
+        <td class="normal">Title:   ______________________</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">229</td>
+        <td class="normal">Title:   ______________________</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">293</td>
+        <td class="normal">Address: ______________________</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">230</td>
+        <td class="normal">Address: ______________________</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">294</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;______________________</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">231</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;______________________</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">295</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">232</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">296</td>
+        <td class="normal">Us</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">233</td>
+        <td class="normal">Us</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">297</td>
+        <td class="normal">________________________</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">234</td>
+        <td class="normal">________________________</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">298</td>
+        <td class="normal">Name:    ______________________</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">235</td>
+        <td class="normal">Name:    ______________________</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">299</td>
+        <td class="normal">Title:   ______________________</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">236</td>
+        <td class="normal">Title:   ______________________</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">300</td>
+        <td class="normal">Address: ______________________</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">237</td>
+        <td class="normal">Address: ______________________</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">301</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;______________________</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">238</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;______________________</td>
+    </tr>
+
+
+</table>
+</body>
+</html>
+
